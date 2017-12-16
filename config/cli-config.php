@@ -1,20 +1,13 @@
 <?php
 
-require_once __DIR__ . "/../vendor/autoload.php";
-
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
-$paths = [__DIR__ . '/../models/entity'];
-$isDevMode = true;
+$config = require 'config.php';
 
-// the connection configuration
-$dbParams = [
-    'driver'   => 'pdo_mysql',
-    'user'     => 'slim',
-    'password' => 'slim123',
-    'dbname'   => 'slim',
-];
+$paths = [$config['entitiesDir']];
+$isDevMode = $config['devMode'];
+$dbParams = $config['db'];
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
 $entityManager = EntityManager::create($dbParams, $config);

@@ -3,9 +3,12 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
+$app->get('/write', function (Request $request, Response $response) {
+    $request->withAttribute('userId', 1);
+    return $response;
+});
 
+$app->get('/edit', function (Request $request, Response $response) {
+    $request->withAttribute('userId', 1);
     return $response;
 });

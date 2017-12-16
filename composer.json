@@ -22,5 +22,10 @@
   "require": {
     "potievdev/slim-rbac" : "dev-master",
     "slim/slim": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Potievdev\\SlimRbacApp\\": ""
+    }
   }
 }
