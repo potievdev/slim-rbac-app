@@ -1,5 +1,5 @@
 {
-  "name": "potievdev/slim-rb-app",
+  "name": "potievdev/slim-rbac-app",
   "description": "Demo application for testing Slim RBAC",
   "keywords": [
     "slim",
