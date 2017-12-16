@@ -1,0 +1,26 @@
+{
+  "name": "potievdev/slim-rb-app",
+  "description": "Demo application for testing Slim RBAC",
+  "keywords": [
+    "slim",
+    "middleware",
+    "application",
+    "authorization",
+    "rbac",
+    "potievdev"
+  ],
+  "homepage": "https://github.com/potievdev/slim-rbac-app",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdulmalik Abdulpotiev",
+      "email": "potievdev@gmail.com",
+      "homepage": "http://potievdev.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "potievdev/slim-rbac" : "dev-master",
+    "slim/slim": "^3.0"
+  }
+}
