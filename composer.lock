@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aee9533b5953eaa11b921c58d4e18d7a",
+    "content-hash": "3dc024fb92786c78c12f851d407d4676",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -563,16 +563,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.5.13",
+            "version": "v2.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "93103f44a3e36e7b48165b6e6b736833f33b18ef"
+                "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/93103f44a3e36e7b48165b6e6b736833f33b18ef",
-                "reference": "93103f44a3e36e7b48165b6e6b736833f33b18ef",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/810a7baf81462a5ddf10e8baa8cb94b6eec02754",
+                "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754",
                 "shasum": ""
             },
             "require": {
@@ -635,7 +635,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-11-27T23:25:55+00:00"
+            "time": "2017-12-17T02:57:51+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -736,12 +736,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/potievdev/slim-rbac.git",
-                "reference": "abe1ac68485c37138ce4dc6ea28296efe00bf31e"
+                "reference": "8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/potievdev/slim-rbac/zipball/abe1ac68485c37138ce4dc6ea28296efe00bf31e",
-                "reference": "abe1ac68485c37138ce4dc6ea28296efe00bf31e",
+                "url": "https://api.github.com/repos/potievdev/slim-rbac/zipball/8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb",
+                "reference": "8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +784,7 @@
                 "rbac",
                 "slim"
             ],
-            "time": "2017-12-16T20:09:10+00:00"
+            "time": "2017-12-17T19:15:33+00:00"
         },
         {
             "name": "psr/container",

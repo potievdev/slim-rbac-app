@@ -11,7 +11,7 @@
 use Potievdev\SlimRbac\Component\AuthManager;
 use Potievdev\SlimRbac\Models\Entity\Permission;
 use Potievdev\SlimRbac\Models\Entity\Role;
-use Potievdev\SlimRbac\Structure\AuthManagerOptions;
+use Potievdev\SlimRbac\Structure\AuthOptions;
 
 require_once  'vendor/autoload.php';
 
@@ -25,16 +25,16 @@ $entityManagerHelper = $helperSet->get('em');
 $entityManager = $entityManagerHelper->getEntityManager();
 
 /**
- * @var AuthManagerOptions $authManagerOptions
+ * @var AuthOptions $authOptions
  * It will pass as argument for AuthManager constructor
  */
-$authManagerOptions = new AuthManagerOptions();
+$authOptions = new AuthOptions();
 
 // Setting entity manager instance
-$authManagerOptions->setEntityManager($entityManager);
+$authOptions->setEntityManager($entityManager);
 
 // Initialize AuthManager instance
-$authManager = new AuthManager($authManagerOptions);
+$authManager = new AuthManager($authOptions);
 
 // Clear all roles, permissions, role assigns, role tree
 $authManager->removeAll();
