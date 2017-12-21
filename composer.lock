@@ -736,12 +736,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/potievdev/slim-rbac.git",
-                "reference": "8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb"
+                "reference": "a66500561e1498e0b86bbb2fea89949e47013508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/potievdev/slim-rbac/zipball/8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb",
-                "reference": "8e9ffbcc24f5afdedcf7eb3ef401d54189f52beb",
+                "url": "https://api.github.com/repos/potievdev/slim-rbac/zipball/a66500561e1498e0b86bbb2fea89949e47013508",
+                "reference": "a66500561e1498e0b86bbb2fea89949e47013508",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +784,7 @@
                 "rbac",
                 "slim"
             ],
-            "time": "2017-12-17T19:15:33+00:00"
+            "time": "2017-12-21T22:00:30+00:00"
         },
         {
             "name": "psr/container",

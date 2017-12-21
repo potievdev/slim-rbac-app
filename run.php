@@ -13,16 +13,11 @@ use Potievdev\SlimRbac\Models\Entity\Permission;
 use Potievdev\SlimRbac\Models\Entity\Role;
 use Potievdev\SlimRbac\Structure\AuthOptions;
 
+// Autoload
 require_once  'vendor/autoload.php';
 
-/** @var $helperSet */
-$helperSet =  require 'config/cli-config.php';
-
-/** @var \Doctrine\ORM\Tools\Console\Helper\EntityManagerHelper $entityManagerHelper */
-$entityManagerHelper = $helperSet->get('em');
-
 /** @var \Doctrine\ORM\EntityManager $entityManager */
-$entityManager = $entityManagerHelper->getEntityManager();
+$entityManager = require 'config/sr-config.php';
 
 /**
  * @var AuthOptions $authOptions
@@ -60,13 +55,13 @@ $admin->setName('admin');
 $authManager->addRole($admin);
 
 // Adding /edit permission to moderator role
-$authManager->addPermissionToRole($moderator, $edit);
+$authManager->addChildPermission($moderator, $edit);
 
 // Adding /write permission to admin role
-$authManager->addPermissionToRole($admin, $write);
+$authManager->addChildPermission($admin, $write);
 
 // Adding moderator role to admin as child. After this admin role obtain all moderator permissions
-$authManager->addChildRoleToRole($admin, $moderator);
+$authManager->addChildRole($admin, $moderator);
 
 // Demo moderator user identifier
 $moderatorUserId = 1;
@@ -74,7 +69,7 @@ $moderatorUserId = 1;
 $adminUserId = 2;
 
 // Assigning moderator role to user (user.id = 1)
-$authManager->assignRoleToUser($moderatorUserId, $moderator);
+$authManager->assign($moderator, $moderatorUserId);
 
 // Assigning admin role to user (user.id = 1)
-$authManager->assignRoleToUser($adminUserId, $admin);
+$authManager->assign($admin, $adminUserId);

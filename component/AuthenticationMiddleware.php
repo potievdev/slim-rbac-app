@@ -2,30 +2,17 @@
 
 namespace Potievdev\SlimRbacApp\Component;
 
-use Doctrine\ORM\EntityManager;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
- * Class UserMiddleware
+ * Class AuthenticationMiddleware
  * @package Potievdev\SlimRbacApp\Component
  */
-class AuthorizeMiddleware
+class AuthenticationMiddleware
 {
-    /** @var  EntityManager $em */
-    private $em;
-
     /**
-     * UserMiddleware constructor.
-     * @param EntityManager $em
-     */
-    public function __construct(EntityManager $em)
-    {
-        $this->em = $em;
-    }
-
-    /**
-     * Check access
+     * Authentication user
      * @param  ServerRequestInterface                   $request  PSR7 request
      * @param  ResponseInterface                        $response PSR7 response
      * @param  callable                                 $next     Next middleware
@@ -35,13 +22,12 @@ class AuthorizeMiddleware
     public function __invoke($request, $response, $next)
     {
         /**
-         * Implement user authorization logic.
-         * After set user identifier in $request as userId
+         * Here you must release authentication logic.
          */
 
-        $detectedUserId = 2;
+        $exampleAuthenticatedUserId = 2;
 
-        $request = $request->withAttribute('userId', $detectedUserId);
+        $request = $request->withAttribute('userId', $exampleAuthenticatedUserId);
 
         $response = $next($request, $response);
 

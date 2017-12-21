@@ -2,13 +2,10 @@
 
 use Potievdev\SlimRbac\Component\AuthMiddleware;
 use Potievdev\SlimRbac\Structure\AuthOptions;
-use Potievdev\SlimRbacApp\Component\AuthorizeMiddleware;
-
-/** @var \Slim\Container $container */
-$container = $app->getContainer();
+use Potievdev\SlimRbacApp\Component\AuthenticationMiddleware;
 
 /** @var \Doctrine\ORM\EntityManager $entityManager */
-$entityManager = $container->get('em');
+$entityManager = $app->getContainer()->get('em');;
 
 /** @var AuthOptions $authOptions */
 $authOptions = new AuthOptions();
@@ -20,4 +17,4 @@ $authOptions->setEntityManager($entityManager);
 $app->add(new AuthMiddleware($authOptions));
 
 /** User authorization and define user identifier middleware */
-$app->add(new AuthorizeMiddleware($entityManager));
+$app->add(new AuthenticationMiddleware());
